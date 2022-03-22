@@ -1,12 +1,38 @@
+.superInputContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .superInput {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #ffffff !important;
+    outline: none;
+    height: 24px;
+    width: 120px;
+    color: #00ff00;
+    font-size: 11px;
+    font-family: 'FreeMono', monospace;
 
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #ff0000 !important;
+    outline: none;
+    height: 24px;
+    width: 120px;
+    color: #00ff00;
+    font-size: 11px;
+    font-family: 'FreeMono', monospace;
 }
 
 .error {
+    font-family: 'FreeMono', monospace;
+    font-size: x-large;
     color: red;
+    margin-left: 40px;
 }

@@ -6,7 +6,7 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
 function HW4() {
     const [text, setText] = useState<string>('')
-    const error = text ? '' : 'error'
+    const error = text ? '' : 'InvalidName'
 
     const showAlert = () => {
         if (error) {
@@ -17,7 +17,10 @@ function HW4() {
     }
 
     const [checked, setChecked] = useState<boolean>(false)
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
+    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log('some')
+        setChecked(e.currentTarget.checked)
+    }
 
     return (
         <div>
@@ -34,6 +37,7 @@ function HW4() {
                 />
 
                 <SuperInputText
+
                     className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
 
@@ -51,7 +55,7 @@ function HW4() {
                 </SuperButton>
 
                 <SuperButton disabled>
-                    disabled
+                    disable
                 </SuperButton>
 
                 {/*----------------------------------------------------*/}
@@ -60,7 +64,7 @@ function HW4() {
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
-                    some text {/*// этот текст попадёт в children*/}
+                    {String(checked)}{/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}

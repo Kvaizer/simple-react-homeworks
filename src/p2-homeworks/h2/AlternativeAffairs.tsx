@@ -8,4 +8,4 @@ function AlternativeAffairs() {
     )
 }
 
-export default AlternativeAffairs
+export default AlternativeAffairs;

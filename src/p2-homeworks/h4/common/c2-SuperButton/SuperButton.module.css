@@ -1,7 +1,37 @@
 .default {
+    width: 100px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 40%;
+    font-family: 'FreeMono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #00ff00 0%, #27a027 51%, #121216 100%);;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
 
+.default:hover {
+    background-position: right center;
 }
 
 .red {
-    background: red;
+    width: 100px;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    text-decoration: none;
+    border-radius: 40%;
+    background-color: #8e0909;
+    font-family: 'FreeMono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.red:hover {
+    background-color: red;
 }

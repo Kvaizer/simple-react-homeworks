@@ -1,7 +1,27 @@
-.someClass {
-
+.greetingContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    padding-left: 200px;
 }
 
 .error {
     border: 1px solid red;
+}
+
+.counter {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 10%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.counterText {
+    font-size: xx-large;
+    font-family: 'FreeMono', monospace;
+    color: springgreen;
 }

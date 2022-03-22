@@ -44,12 +44,14 @@ p {
 }
 
 .messageText {
+    height: 40px;
     display: flex;
     justify-content: space-between;
 }
 
 .time {
     color: rgba(0,0,0,0.5);
+    align-self: end;
 }
 
 .name {

@@ -1,38 +1,38 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairType} from './HW2'
+import {AffairType, FilterType} from './HW2'
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
 
-type AffairsPropsType = { // need to fix any
-    data: any
-    setFilter: any
-    deleteAffairCallback: any
+type AffairsPropsType = {
+    data: Array<AffairType>
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
 }
 
 function Affairs(props: AffairsPropsType) {
-    const mappedAffairs = props.data.map((a: AffairType) => (
-        <Affair // should work
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
-            affair={a}
+    const mappedAffairs = props.data.map((item: AffairType) => (
+        <Affair
+            key={item._id}
+            affair={item}
             deleteAffairCallback={props.deleteAffairCallback}
         />
-    ))
+    ));
 
-    const setAll = () => {} // need to fix
-    const setHigh = () => {}
-    const setMiddle = () => {}
-    const setLow = () => {}
+    const set = (filter: FilterType) => props.setFilter(filter);
+    // const setAll = (filter: FilterType) => props.setFilter(filter);
+    // const setHigh = (filter: FilterType) => props.setFilter(filter);
+    // const setMiddle = (filter: FilterType) => props.setFilter(filter);
+    // const setLow = (filter: FilterType) => props.setFilter(filter);
 
     return (
         <div>
-
             {mappedAffairs}
-
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <SuperButton onClick={() => set('all')}>All</SuperButton>
+            <SuperButton onClick={() => set('high')}>High</SuperButton>
+            <SuperButton onClick={() => set('middle')}>Middle</SuperButton>
+            <SuperButton onClick={() => set('low')}>Low</SuperButton>
         </div>
     )
 }
 
-export default Affairs
+export default Affairs;

@@ -1,7 +1,17 @@
-.checkbox {
-
+.label {
+    display: flex;
+    justify-content: center;
 }
 
-.spanClassName {
+.checkbox {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
+.statusText {
+    font-family: 'FreeMono', monospace;
+    font-size: x-large;
+    color: white;
+    margin-left: 40px;
 }

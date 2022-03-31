@@ -19,7 +19,7 @@ function Pages() {
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
                 // add routes
 
-                у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу
+                123у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу
                 <Route path={PATH.ERROR_404} element={<Error404/>}/>
                 <Route path={PATH.JUNIOR} element={<div>NOT YET BUT SOON</div>}/>
                 <Route path={PATH.JUNIOR_PLUS} element={<div>NOT YET</div>}/>

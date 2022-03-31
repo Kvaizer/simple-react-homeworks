@@ -1,5 +1,6 @@
 {
   "name": "dz_ignata_vipolnenie",
+  "homepage": "http://kvaizer.github.io/simple-react-homeworks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +21,6 @@
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.0"
   },
-  "homepage": "http://Kvaizer.github.io/simple-react-homeworks",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "gh": "^2.8.9"
+    "gh": "^2.8.9",
+    "gh-pages": "^3.2.3"
   }
 }

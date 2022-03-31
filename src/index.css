@@ -1,5 +1,6 @@
 body {
-    background: url(https://previews.123rf.com/images/wbraga/wbraga1805/wbraga180500039/102010925-hacker-mit-dem-internet-gehackten-abstrakten-computerserver-datenbank-netzwerkspeicher-firewall-kont.jpg);
+    background: url(https://previews.123rf.com/images/wbraga/wbraga1805/wbraga180500039/102010925-hacker-mit-dem-internet-gehackten-abstrakten-computerserver-datenbank-netzwerkspeicher-firewall-kont.jpg), rgba(255,255,255,0.1);
+    background-blend-mode: color;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

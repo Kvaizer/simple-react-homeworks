@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AlternativeSuperButton() {
+function AlternativeSuperButton () {
     return (
         <button/>
     )

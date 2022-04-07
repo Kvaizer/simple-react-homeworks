@@ -16,8 +16,6 @@ function HW6() {
     return (
         <div>
             <hr/>
-            homeworks 6
-
             {/*should work (должно работать)*/}
             <div>
                 <SuperEditableSpan

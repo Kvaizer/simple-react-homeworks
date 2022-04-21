@@ -7,17 +7,17 @@ const arr = ['x', 'y', 'z']
 function HW7() {
     const [value, onChangeOption] = useState(arr[1])
 
+    const onChangeOptionCB = (value: string) => {
+        onChangeOption(value)
+    }
     return (
         <div>
             <hr/>
-            homeworks 7
-
-            {/*should work (должно работать)*/}
             <div>
                 <SuperSelect
                     options={arr}
                     value={value}
-                    onChangeOption={onChangeOption}
+                    onChangeOption={onChangeOptionCB}
                 />
             </div>
             <div>
@@ -25,7 +25,7 @@ function HW7() {
                     name={'radio'}
                     options={arr}
                     value={value}
-                    onChangeOption={onChangeOption}
+                    onChangeOption={onChangeOptionCB}
                 />
             </div>
 

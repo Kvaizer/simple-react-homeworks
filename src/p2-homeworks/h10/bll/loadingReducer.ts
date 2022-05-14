@@ -5,6 +5,7 @@ const initState = {
 }
 
 export const loadingReducer = (state: {isLoading: boolean} = initState, action: LoadingAT): {isLoading: boolean} => {
+    debugger
     switch (action.type) {
         case 'LOADING': {
             return {

@@ -1,14 +1,21 @@
+import {AppStoreType} from '../../h10/bll/store';
+
 const initState = {
+    theme: 'some'
+}
 
-};
-
-export const themeReducer = (state = initState, action: any): any => { // fix any
+export const themeReducer = (state: {theme: string} = initState, action: ChangeThemeAT): {theme: string} => {
     switch (action.type) {
-        case "": {
-            return state;
+        case 'CHANGE-THEME': {
+            return {
+                theme: action.theme
+            }
         }
-        default: return state;
+        default: return state
     }
-};
+}
 
-export const changeThemeC = (): any => {}; // fix any
+export const changeThemeAC = (theme: string) => ({type: 'CHANGE-THEME', theme} as const)
+export type ChangeThemeAT = ReturnType<typeof changeThemeAC>
+
+export const selectTheme = (store: AppStoreType) => store.themeState.theme

@@ -26,3 +26,9 @@ label {
     border-radius: 50%;
 }
 
+.superRadioContainer {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}

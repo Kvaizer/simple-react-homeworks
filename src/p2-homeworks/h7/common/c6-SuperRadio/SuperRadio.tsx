@@ -5,26 +5,33 @@ type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperRadioPropsType = DefaultRadioPropsType & {
     options?: any[]
     onChangeOption: (option: any) => void
+    fontStyle?: string
 }
 
 const SuperRadio: React.FC<SuperRadioPropsType> = (
     {
         type, name,
         options, value,
-        onChange, onChangeOption,
+        onChange, onChangeOption, fontStyle,
         ...restProps
     }
 ) => {
+    let classNameForOption = '';
+    if(fontStyle) {classNameForOption = fontStyle}
     const mappedOptions: any[] = options ? options.map((o, i) => (
+        <div className={s.superRadioContainer}>
+            <div>
         <label className={s.radio} key={i}>
-            <input
+                <input
                 className={s.radio}
                 type={'radio'}
                 onChange={() => onChangeOption(o)}
                 checked={o === value}
             /><span></span>
-            {o}
+            <div className={classNameForOption}>{o}</div>
         </label>
+        </div>
+        </div>
     )) : []
 
     return (

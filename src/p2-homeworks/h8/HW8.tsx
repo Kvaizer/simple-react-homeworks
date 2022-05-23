@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {CheckAC, homeWorkReducer, SortAC} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
 import s from './HW8.module.css'
+import {v1} from 'uuid';
 
 export type userType = {
     _id: number
@@ -41,9 +42,9 @@ function HW8() {
 
             {finalPeople}
             <div className={s.buttonBox}>
-                <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-                <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
-                <div><SuperButton onClick={ageCheck}>Age check</SuperButton></div>
+                <div><SuperButton key={v1()} onClick={sortUp}>sort up</SuperButton></div>
+                <div><SuperButton key={v1()}  onClick={sortDown}>sort down</SuperButton></div>
+                <div><SuperButton key={v1()}  onClick={ageCheck}>Age check</SuperButton></div>
             </div>
 
 

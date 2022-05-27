@@ -1,0 +1,33 @@
+.mainContainer {
+    display: flex;
+    width: 50%;
+    height: 20%;
+    margin: 1rem;
+}
+
+.checkBoxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3rem;
+}
+
+.err {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    width: 400px;
+    font-family: 'FreeMono', monospace;
+    color: red;
+}
+
+.done {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    width: 400px;
+    font-family: 'FreeMono', monospace;
+    color: lime;
+}

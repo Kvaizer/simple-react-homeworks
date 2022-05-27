@@ -16,13 +16,11 @@ const Requests = () => {
             .then(res => {
                 console.log(res)
                 setMessage('Request was successfully done')
-                setDisabled(true)
             })
             .catch(err => {
                 console.log({...err})
                 console.log(err.response ? err.response.data.errorText : err.message)
                 setMessage(err.message)
-                setDisabled(true)
             })
             .finally(() => {
                 console.log(state)

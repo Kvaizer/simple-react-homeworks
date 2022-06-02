@@ -10,7 +10,9 @@ function HW6() {
         saveState<string>('editable-span-value', value)
     }
     const restore = () => {
-        setValue(restoreState('test1', value))
+        const a =  localStorage.getItem('test')
+        const b = a ? JSON.parse(a) : 'error'
+        return a ? setValue(restoreState('test1', `${b.x}, ${b.y}`)) : ''
     }
 
     return (
